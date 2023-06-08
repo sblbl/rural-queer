@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Zen+Maru+Gothic:wght@700&family=Darumadrop+One&family=VT323&display=swap');
+@tailwind base;
+@tailwind components;
+
+@font-face {
+	font-family: 'Sneaky-Times';
+	src: local('Sneaky-Times'), url(./lib/fonts/Sneaky-Times.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Mattone-150';
+	src: local('Mattone-150'), url(./lib/fonts/Mattone-150.woff) format('woff');
+}
+
+@tailwind utilities;
+
+
+/* global */
+html, body {
+	@apply scrollbar-none;
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+	height: 4px; 
+	cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+	@apply bg-gray-200 rounded-full cursor-pointer;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply bg-gray-300 rounded-full cursor-pointer;
+}
+
+.no-default {
+	@apply border-none focus:outline-none;
+}
+
+.button {
+	@apply no-default bg-white text-oioBlue font-semibold px-4 py-2 rounded-full disabled:opacity-50;
+}
+
+a {
+	@apply no-default underline underline-offset-4 decoration-2 decoration-black;
+}
+/* pages */
+.section {
+	@apply w-screen px-0 md:px-8 block font-default;
+}
